@@ -1,0 +1,17 @@
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.BLL.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.BLL.pdb
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\obj\Debug\TicketBooking.BLL.csprojAssemblyReference.cache
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\obj\Debug\TicketBooking.BLL.csproj.CoreCompileInputs.cache
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\obj\Debug\TicketBooking.BLL.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\obj\Debug\TicketBooking.BLL.pdb
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.Models.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.Repository.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.Models.pdb
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.Repository.pdb
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.Repository.dll.config
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\obj\Debug\TicketBooking.BLL.csproj.CopyComplete
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.DatabaseContext.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\EntityFramework.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.DatabaseContext.pdb
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\TicketBooking.DatabaseContext.dll.config
+E:\ASP DOT NET\TicketBooking\TicketBooking.BLL\bin\Debug\EntityFramework.xml

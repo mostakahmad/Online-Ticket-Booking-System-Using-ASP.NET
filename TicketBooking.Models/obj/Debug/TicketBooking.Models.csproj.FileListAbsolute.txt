@@ -1,0 +1,6 @@
+E:\ASP DOT NET\TicketBooking\TicketBooking.Models\bin\Debug\TicketBooking.Models.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.Models\bin\Debug\TicketBooking.Models.pdb
+E:\ASP DOT NET\TicketBooking\TicketBooking.Models\obj\Debug\TicketBooking.Models.csprojAssemblyReference.cache
+E:\ASP DOT NET\TicketBooking\TicketBooking.Models\obj\Debug\TicketBooking.Models.csproj.CoreCompileInputs.cache
+E:\ASP DOT NET\TicketBooking\TicketBooking.Models\obj\Debug\TicketBooking.Models.dll
+E:\ASP DOT NET\TicketBooking\TicketBooking.Models\obj\Debug\TicketBooking.Models.pdb

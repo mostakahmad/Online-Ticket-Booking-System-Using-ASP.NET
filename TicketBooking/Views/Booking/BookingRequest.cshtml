@@ -1,0 +1,47 @@
+﻿@model List<TicketBooking.Models.Models.Booking>
+@{
+    ViewBag.Title = "Bookings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-sm-12">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title card-header text-center" style="margin-bottom : 20px;">Booking Details</h4>
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover text-center">
+                    <thead class="bg-primary">
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var booking in Model)
+                        {
+                        <tr>
+                            <td>@booking.FromBranch</td>
+                            <td>@booking.ToBranch</td>
+                            <td>@booking.Category</td>
+                            <td>@booking.Date</td>
+                            <td>@booking.Price</td>
+                            <td>
+                                <a href="/booking/delete?ID=@booking.BookingID" onclick="return confirm('Are you sure to Cancel this !!');" class="btn btn-primary btn-xs" title="Cancel">
+                                    <span class="glyphicon glyphicon-cancel">Cancel</span>
+                                </a>
+                                <a href="/booking/confirm?ID=@booking.BookingID" class="btn btn-danger btn-xs" title="OK">
+                                    <span class="glyphicon glyphicon-ok">OK</span>
+                                </a>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

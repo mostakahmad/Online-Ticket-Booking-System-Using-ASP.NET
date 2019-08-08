@@ -1,0 +1,73 @@
+﻿@model List<TicketBooking.Models.Models.Branch>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <form class="form-horizontal" action="/branch/add" method="post">
+                    <div class="card-body">
+                        <h4 class="card-title card-header" style="margin-bottom : 20px;">Add Branch</h4>
+                        @if (ViewBag.msg != null)
+                        {
+                            <h3 class="text-success">@ViewBag.msg</h3>
+                        }
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="BranchName">Branch Name</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="BranchName" placeholder="Enter Branch Name" name="BranchName">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="BranchAdmin">Branch Admin</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="BranchAdmin" placeholder="Enter Admin Name" name="BranchAdmin">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="AdminCell">Admin Cell</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="AdminCell" placeholder="Enter Admin Phone" name="AdminCell">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="row card-body">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Add Branch</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top : 15px; margin-bottom : 250px;">
+    <table class="table table-bordered table-hover">
+        <thead class="bg-info text-center text-white">
+            <tr>
+                <th>SL</th>
+                <th>Branch Name</th>
+                <th>Branch Admin</th>
+                <th>Admin Cell</th>
+            </tr>
+        </thead>
+        <tbody class="text-center" style="background-color : lightgray;">
+            @{ int sl = 1;}
+            @foreach (var branch in Model)
+            {
+                <tr>
+                    <td>@(sl++)</td>
+                    <td>@branch.BranchName</td>
+                    <td>@branch.BranchAdmin</td>
+                    <td>@branch.AdminCell</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

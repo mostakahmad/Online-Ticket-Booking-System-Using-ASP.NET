@@ -1,0 +1,130 @@
+﻿@model TicketBooking.Models.Master
+@{
+    ViewBag.Title = "Add Fair";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-sm-12">
+
+    <div class="card">
+        <form class="form" action="/fair/add" method="post">
+            <div class="card-body">
+                <h4 class="card-title card-header" style="margin-bottom : 20px;">Add Fair</h4>
+                <div class="row form-group">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <label class="col-sm-10 text-left control-label col-form-label text-danger" id="msg"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <label class="col-sm-4 text-right control-label col-form-label" for="FromBranch">From</label>
+                            <div class="col-sm-8">
+                                <select class="col-md-12 rounded" name="FromBranchID" id="FromBranchID" style="height : 40px;">
+                                    <option value="none" selected disabled hidden>--Select--</option>
+                                    @foreach (var branch in Model.branches)
+                                    {
+                                        if (branch != Model.branches.Last())
+                                        {
+                                            <option name="FromBranchID" value="@branch.BranchID">@branch.BranchName</option>
+                                        }
+
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <label class="col-sm-4 text-right control-label col-form-label" for="ToBranch">To</label>
+                            <div class="col-sm-8">
+                                <select class="col-md-12 rounded" name="ToBranchID" id="ToBranchID" style="height : 40px;">
+                                    <option value="none" selected disabled hidden>--Select--</option>
+                                    @foreach (var branch in Model.branches)
+                                    {
+                                        if (branch != Model.branches.First())
+                                        {
+                                            <option name="ToBranchID" value="@branch.BranchID">@branch.BranchName</option>
+                                        }
+
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <label class="col-sm-4 text-right control-label col-form-label" for="AC">AC</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="col-md-12 rounded" name="AC" id="AC" style="height : 40px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="row">
+                            <label class="col-sm-4 text-right control-label col-form-label" for="NonAC">Non-AC</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="col-md-12 rounded" name="NonAC" id="NonAC" style="height : 40px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top">
+                <div class="row card-body">
+                    <div class="col-md-6">
+                        <button id="ConfirmBtn" type="submit" class="btn btn-primary">Add Fair</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden"  name="FromBranch" id="FromBranch">
+            <input type="hidden"  name="ToBranch" id="ToBranch">
+        </form>
+        <div id="Details">
+            <div class="border-top">
+                <div class="card-body">
+                    <h4 class="card-title card-header text-center" style="margin-bottom : 20px;">Ticket Details</h4>
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-hover text-center">
+                            <thead class="bg-primary">
+                                <tr>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>AC</th>
+                                    <th>Non-AC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var fair in Model.fairs)
+                                {
+                                    <tr>
+                                        <td>@fair.FromBranch</td>
+                                        <td>@fair.ToBranch</td>
+                                        <td>@fair.AC</td>
+                                        <td>@fair.NonAC</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Theme/admin/vendor/jquery/jquery.min.js"></script>
+<script src="~/Theme/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#ConfirmBtn").click(function () {
+            var FromBranch = $("#FromBranchID").children("option:selected").text();
+            var ToBranch = $("#ToBranchID").children("option:selected").text();
+            $('#FromBranch').val(FromBranch);
+            $('#ToBranch').val(ToBranch);
+        });
+    });
+</script>
